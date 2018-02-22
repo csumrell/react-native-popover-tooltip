@@ -337,28 +337,7 @@ class PopoverTooltip extends React.PureComponent<Props, State> {
               </Animated.View>
             </TouchableOpacity>
           </Animated.View>
-          <Animated.View style={{
-            position: 'absolute',
-            left: this.state.x,
-            top: this.state.y,
-            width: this.state.width,
-            height: this.state.height,
-            backgroundColor: 'transparent',
-            opacity: this.state.buttonComponentOpacity, // At the first frame, the button will be rendered
-                                                        // in the top-left corner. So we dont render it
-                                                        // until its position has been calculated.
-            transform: [
-              { scale: this.state.buttonComponentContainerScale },
-            ],
-          }}>
-            <TouchableOpacity
-              onPress={this.toggle}
-              activeOpacity={1.0}
-            >
-              {this.props.buttonComponent}
-            </TouchableOpacity>
-          </Animated.View>
-        </Modal>
+       </Modal>
       </TouchableOpacity>
     );
   }
