@@ -295,10 +295,7 @@ class PopoverTooltip extends React.PureComponent<Props, State> {
         delayLongPress={this.props.delayLongPress}
         activeOpacity={1.0}
       >
-        <View style={[
-          { opacity: this.state.oppositeOpacity },
-          this.props.componentContainerStyle,
-        ]}>
+        <View style={this.props.componentContainerStyle}>
           {this.props.buttonComponent}
         </View>
         <Modal
